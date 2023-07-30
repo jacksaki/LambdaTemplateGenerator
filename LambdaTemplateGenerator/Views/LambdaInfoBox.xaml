@@ -1,0 +1,25 @@
+﻿<UserControl
+        x:Class="LambdaTemplateGenerator.Views.LambdaInfoBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:avalon="http://icsharpcode.net/sharpdevelop/avalonedit"
+        xmlns:mahApps="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:wpf="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:l="http://schemas.livet-mvvm.net/2011/wpf"
+        xmlns:v="clr-namespace:LambdaTemplateGenerator.Views"
+        xmlns:vm="clr-namespace:LambdaTemplateGenerator.ViewModels"
+        xmlns:m="clr-namespace:LambdaTemplateGenerator.Models"
+        mc:Ignorable="d" 
+        d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Margin="4,4,4,20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ComboBox wpf:HintAssist.Hint="AppSyncタイプ" ItemsSource="{Binding Source={v:EnumList {x:Type m:GraphQLTypes}}}" SelectedItem="{Binding Parameter.Type,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox Grid.Row="1" Width="Auto" wpf:HintAssist.Hint="Lambda名" Text="{Binding Parameter.Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+    </Grid>
+</UserControl>

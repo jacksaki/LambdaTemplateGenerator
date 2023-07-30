@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AppSyncResponse>
+	<Parameter Name="Result">
+		<Parameter Name="ErrorCode" Type="String" IsNullable="Y"/>
+		<Parameter Name="Type" Type="ResultType"/>
+		<Parameter Name="Message" Type="String" IsNullable="Y"/>
+	</Parameter>
+</AppSyncResponse>
